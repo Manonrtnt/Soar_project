@@ -5,6 +5,9 @@ Système d'Observation et d'Analyse du Réseau
 
 Le Projet SOAR (Système d'Observation et d'Analyse du Réseau) est une application conçue pour surveiller, analyser et capturer les paquets réseau. 
 
+## Informations sur la Version du Projet
+- Framework utilisé : Django 4.2
+
 ## Objectifs du Projet
 Le projet SOAR a pour objectifs principaux :
 - Offrir une interface conviviale pour la surveillance et l'analyse du trafic réseau.
@@ -22,9 +25,6 @@ Commande pour cloner le projet :
 ```
 git clone https://github.com/Manonrtnt/Soar_project.git
 ```
-
-## Informations sur la Version du Projet
-- Framework utilisé : Django 4.2
 
 ## Créer un Utilisateur Administrateur
 - Un compte administrateur est nécessaire pour accéder aux formulaire et lancer une demande de capture. 
@@ -52,7 +52,11 @@ Pour permettre à l'utilisateur Django d'exécuter des scripts Scapy avec des pr
 
 2. Ajoutez la ligne suivante pour autoriser l'utilisateur spécifié (dans cet exemple, "utilisateur") à exécuter Python 3 avec des privilèges sudo, ainsi que le chemin complet du dossier de scripts :
    ```
-   <utilisateur> ALL=(ALL) NOPASSWD: /usr/bin/python3 /chemin/complet/vers/dossier_scripts/*
+   <utilisateur> ALL=(ALL) NOPASSWD: /usr/bin/python3 /home/osboxes/soar_project/script_scapy/capture_option1_paquet.py
+   <utilisateur> ALL=(ALL) NOPASSWD: /usr/bin/python3 /home/osboxes/soar_project/script_scapy/capture_option2_couche_ethernet.py
+   <utilisateur> ALL=(ALL) NOPASSWD: /usr/bin/python3 /home/osboxes/soar_project/script_scapy/capture_option3_couche_ip.py
+   <utilisateur> ALL=(ALL) NOPASSWD: /usr/bin/python3 /home/osboxes/soar_project/script_scapy/capture_option4_couche_tcp.py
+
    ```
    Note : remplacer utilsiateur par l'utilsiateur exécutant le serveur
    Note : Assurez-vous que le chemin vers le dossier de scripts est correct.
