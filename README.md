@@ -84,7 +84,7 @@ Pour accéder au site depuis une machine distante :
    Pour plus d'informations sur la commande `runserver`, consultez [cette documentation](https://docs.djangoproject.com/en/4.2/ref/django-admin/#runserver).
 
 ### Accès à l'adresse du projet
-- url d'accès : <adresseip>:8000/soar_project
+- url d'accès : < adresseip >:8000/soar_project
 
 ### Connexion
 Pour accéder au formulaire, connectez-vous avec vos identifiants administrateur (cf partie concernant .
