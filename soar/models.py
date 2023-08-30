@@ -1,13 +1,5 @@
 from django.db import models
 
-# class CaptureRequest(models.Model):
-#   requestName = models.CharField(max_length=50)
-#   requestUser = models.CharField(max_length=50)
-#   requestDate = models.DateTimeField("date published")
-#   requestCode = models.IntegerField()
-#   def __str__(self):
-#     return self.requestName
-
 class CaptureRequest(models.Model):
     
     REQUEST_CHOICES = [
@@ -24,10 +16,3 @@ class CaptureRequest(models.Model):
 
     def __str__(self):
         return self.requestName
-
-# class RequestCode(models.Model):
-#     captureRequest = models.ForeignKey(CaptureRequest, on_delete=models.CASCADE)
-#     requestCode = models.IntegerField()
-    
-#     def __str__(self):
-#       return self.requestCode

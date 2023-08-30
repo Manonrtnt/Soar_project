@@ -39,33 +39,6 @@ class CaptureRequestView(FormView):
             # exit(1)
         return super().dispatch(request, *args, **kwargs)
 
-    #    def form_valid(self, form):
-    #        form.save()
-    #        
-    #        captured_packets = ""
-    #    
-    #        # Récupérer le choix de l'utilisateur
-    #        choice = form.cleaned_data['requestCode']
-    #        
-    #        # Débogage
-    #        print(f"Choice selected: {choice}")
-    #    
-    #        # Exécution du script Scapy via subprocess avec privilèges
-    #        try:
-    #            script_path = '/home/osboxes/soar_project/script_scapy/capture_packets.py'
-    #            print(f"Executing script: {script_path}")
-    #            result = subprocess.run(['sudo', 'python3', script_path])
-    #
-    #            print(f"try, {captured_packets}")
-    #        except Exception as e:
-    #            captured_packets = [f"Erreur : {e}"]
-    #            print(f"catch, {captured_packets}")
-    #    
-    #        context = self.get_context_data(form=form, captured_packets=captured_packets)
-    #        
-    #        # Redirection vers la page de succès
-    #        return super().form_valid(form)
-
     def form_valid(self, form):
         form.save()
 

@@ -6,7 +6,7 @@
   
   {% if user.is_authenticated %}
     <p>Bienvenue, {{ user.username }}!</p>
-    <!-- Affichez le formulaire de demande de capture ici -->
+    <!-- Formulaire de demande de capture -->
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
@@ -14,6 +14,7 @@
     </form>
 
   {% else %}
+  <!-- Formulaire connextion -->
     <form method="post" action="{% url 'login' %}">
       {% csrf_token %}
       {{ form.as_p }}
