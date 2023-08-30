@@ -39,11 +39,8 @@ git clone https://github.com/Manonrtnt/Soar_project.git
 
 3. Suivez les invites pour saisir un nom d'utilisateur, une adresse e-mail et un mot de passe pour l'administrateur.
 
-4. Une fois le superutilisateur créé, vous pouvez l'utiliser pour vous connecter à la partie d'administration de votre site.
-
 ---
-
-N'oubliez pas d'ajuster le texte selon vos besoins et de fournir les détails nécessaires pour que les utilisateurs puissent suivre les étapes avec succès.
+Note : Une fois le superutilisateur créé, vous pouvez l'utiliser pour vous connecter à la partie d'administration de votre site, accéder aux formulaire et lancer une demande de capture.
 
 ## Gestion des Droits Utilisateur
 ### Ajouter des Droits Sudo pour l'Utilisateur Django
