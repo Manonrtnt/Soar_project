@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>SOAR</h1>
+  <h2>Système d'Observation et d'Analyse et du Réseau</h2>
+  
+  {% if user.is_authenticated %}
+    <p>Bienvenue, {{ user.username }}!</p>
+    <!-- Affichez le formulaire de demande de capture ici -->
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enregistrer</button>
+    </form>
+
+  {% else %}
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Se connecter</button>
+    </form>
+  {% endif %}
+
+  <a href="{% url 'logout' %}">Logout</a>
+
+</body>
+</html>

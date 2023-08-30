@@ -1,0 +1,26 @@
+<!-- capture_request_success.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Votre titre de page</title>
+</head>
+<body>
+    <h1>SOAR</h1>
+    <h2>Système d'Observation et d'Analyse et du Réseau</h2>
+
+    <h3>Merci ! Votre demande de capture a été enregistrée avec succès.</h3>
+
+    <!-- Résultat capture -->
+    <h2>Résultat de la capture de paquets</h2>
+    <ul>
+        {% for packet in captured_packets %}
+            <li>{{ packet }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'logout' %}">Logout</a>
+
+</body>
+</html>
+
+

@@ -1,0 +1,10 @@
+Ether / IP / ICMP 10.0.2.15 > 8.8.8.8 echo-request 0 / Raw
+Ether / IP / ICMP 8.8.8.8 > 10.0.2.15 echo-reply 0 / Raw
+Ether / IP / ICMP 10.0.2.15 > 8.8.8.8 echo-request 0 / Raw
+Ether / IP / ICMP 8.8.8.8 > 10.0.2.15 echo-reply 0 / Raw
+Ether / IP / ICMP 10.0.2.15 > 8.8.8.8 echo-request 0 / Raw
+Ether / IP / ICMP 8.8.8.8 > 10.0.2.15 echo-reply 0 / Raw
+Ether / IP / ICMP 10.0.2.15 > 8.8.8.8 echo-request 0 / Raw
+Ether / IP / ICMP 8.8.8.8 > 10.0.2.15 echo-reply 0 / Raw
+Ether / IP / ICMP 10.0.2.15 > 8.8.8.8 echo-request 0 / Raw
+Ether / IP / ICMP 8.8.8.8 > 10.0.2.15 echo-reply 0 / Raw
