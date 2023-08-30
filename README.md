@@ -15,18 +15,55 @@ Le projet SOAR a pour objectifs principaux :
 ### Ajouter le Projet au Gestionnaire de Versions (Git)
 Lien du dépôt git :
 ```
-<lien du repository>
+[<lien du repository>](https://github.com/Manonrtnt/Soar_project.git)
 ```
 
 Commande pour cloner le projet :
 ```
-git clone <lien du repository>
+git clone https://github.com/Manonrtnt/Soar_project.git
 ```
 
 ## Informations sur la Version du Projet
 - Framework utilisé : Django 4.2
 
-## Exécution du Serveur
+## Créer un Utilisateur Administrateur
+- Un compte administrateur est nécessaire pour accéder aux formulaire et lancer une demande de capture. 
+   
+1. Ouvrez un terminal et assurez-vous d'être dans le répertoire racine de votre projet Django où se trouve le fichier `manage.py`.
+
+2. Utilisez la commande suivante pour créer un superutilisateur :
+   
+   ```bash
+   python3 manage.py createsuperuser
+   ```
+
+3. Suivez les invites pour saisir un nom d'utilisateur, une adresse e-mail et un mot de passe pour l'administrateur.
+
+4. Une fois le superutilisateur créé, vous pouvez l'utiliser pour vous connecter à la partie d'administration de votre site.
+
+---
+
+N'oubliez pas d'ajuster le texte selon vos besoins et de fournir les détails nécessaires pour que les utilisateurs puissent suivre les étapes avec succès.
+
+## Gestion des Droits Utilisateur
+### Ajouter des Droits Sudo pour l'Utilisateur Django
+Pour permettre à l'utilisateur Django d'exécuter des scripts Scapy avec des privilèges sudo sans mot de passe :
+1. Ouvrez le fichier sudoers en éditant les droits :
+   ```
+   sudo visudo
+   ```
+
+2. Ajoutez la ligne suivante pour autoriser l'utilisateur spécifié (dans cet exemple, "utilisateur") à exécuter Python 3 avec des privilèges sudo, ainsi que le chemin complet du dossier de scripts :
+   ```
+   <utilisateur> ALL=(ALL) NOPASSWD: /usr/bin/python3 /chemin/complet/vers/dossier_scripts/*
+   ```
+   Note : remplacer utilsiateur par l'utilsiateur exécutant le serveur
+   Note : Assurez-vous que le chemin vers le dossier de scripts est correct.
+
+## Accéder au Site
+Pour accéder au site depuis une machine distante :
+- Utilisez la commande `ip a` pour récupérer l'adresse IP privée de l'hôte.
+### Exécution du Serveur
 1. Pour autoriser l'accès à votre application depuis d'autres machines, modifiez le fichier `soar_project/settings.py` en ajoutant votre adresse IP à la liste `ALLOWED_HOSTS` :
    ```
    ALLOWED_HOSTS = ['192.168.56.12', 'localhost', '127.0.0.1', 'votre adresse IP']
@@ -45,27 +82,11 @@ git clone <lien du repository>
 
    Pour plus d'informations sur la commande `runserver`, consultez [cette documentation](https://docs.djangoproject.com/en/4.2/ref/django-admin/#runserver).
 
-### Accéder au Site
-Pour accéder au site depuis une machine distante :
-- Utilisez la commande `ip a` pour récupérer l'adresse IP privée de l'hôte.
+### Accès à l'adresse du projet
+- url d'accès : <adresseip>:8000/soar_project
 
-## Connexion
-Pour accéder au formulaire, connectez-vous avec vos identifiants.
-
-## Gestion des Droits Utilisateur
-### Ajouter des Droits Sudo pour l'Utilisateur Django
-Pour permettre à l'utilisateur Django d'exécuter des scripts Scapy avec des privilèges sudo sans mot de passe :
-1. Ouvrez le fichier sudoers en éditant les droits :
-   ```
-   sudo visudo
-   ```
-
-2. Ajoutez la ligne suivante pour autoriser l'utilisateur spécifié (dans cet exemple, "utilisateur") à exécuter Python 3 avec des privilèges sudo, ainsi que le chemin complet du dossier de scripts :
-   ```
-   <utilisateur> ALL=(ALL) NOPASSWD: /usr/bin/python3 /chemin/complet/vers/dossier_scripts/*
-   ```
-   Note : remplacer utilsiateur par l'utilsiateur exécutant le serveur
-   Note : Assurez-vous que le chemin vers le dossier de scripts est correct.
+### Connexion
+Pour accéder au formulaire, connectez-vous avec vos identifiants administrateur (cf partie concernant .
 
 ## Capture de Paquets
 ### Test de Capture
