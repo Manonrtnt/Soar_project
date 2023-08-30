@@ -107,4 +107,4 @@ Pour tester une capture de paquets :
 6. Visualiser les informations sur le terminal et découvrer le fichier crée depuis le dossier : soar_project/capture/
 ---
 
-N'oubliez pas d'ajuster les chemins de fichiers, les adresses IP et autres détails selon votre configuration. Cette documentation devrait offrir un aperçu complet de l'installation, de l'utilisation et de la configuration de votre projet SOAR.
+Cette documentation devrait offrir un aperçu complet de l'installation, de l'utilisation et de la configuration du projet SOAR.
